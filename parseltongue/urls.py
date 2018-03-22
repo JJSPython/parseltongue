@@ -18,6 +18,6 @@ from parseltongue import parser
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    path('crawler', parser.parser_post),
+    path('', parser.parser_post),
 ]
 urlpatterns += staticfiles_urlpatterns()
