@@ -1,6 +1,8 @@
 # parseltongue
 Painless data parsing.  
-[Demo](https://vast-refuge-25114.herokuapp.com/crawler)
+
+## Demo
+Live [demo](https://vast-refuge-25114.herokuapp.com/crawler).
 
 ## Development setup
 
