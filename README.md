@@ -1,5 +1,6 @@
 # parseltongue
-The tool about parse data.
+Painless data parsing.  
+[Demo](https://vast-refuge-25114.herokuapp.com/crawler)
 
 ## Development setup
 
@@ -16,9 +17,6 @@ First time running the project? Make sure you have Python installed, and follow 
 
 * Install [python](https://www.python.org/)
 * Install [Git](https://git-scm.com/downloads)
-
-## Example
-* Install [Heroku](https://vast-refuge-25114.herokuapp.com/crawler)
 
 ## License
 Apache License 2.0
