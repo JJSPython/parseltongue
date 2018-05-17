@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from selenium import webdriver
 from crawler.parser_geneerator import JsonToGetText
-
+from selenium.webdriver.chrome.options import Options
 
 def parser_post(request):
     return_text = {}
@@ -14,7 +14,8 @@ def parser_post(request):
         if url is not '' and html is '':
             #driver = webdriver.Chrome(
             #    executable_path=r'/Users/qq/PycharmProjects/parseltongue/chromedriver/chromedriver')
-            driver = webdriver.Chrome()
+            chrome_opthions = Options.add_argument('--headless')
+            driver = webdriver.Chrome(chrome_options=chrome_opthions)
             driver.get(url)
             html = driver.page_source
             driver.close()
