@@ -12,8 +12,9 @@ def parser_post(request):
         return_text['URL'] = url
         return_text['html'] = html
         if url is not '' and html is '':
-            driver = webdriver.Chrome(
-                executable_path=r'/Users/qq/PycharmProjects/parseltongue/chromedriver/chromedriver')
+            #driver = webdriver.Chrome(
+            #    executable_path=r'/Users/qq/PycharmProjects/parseltongue/chromedriver/chromedriver')
+            driver = webdriver.Chrome()
             driver.get(url)
             html = driver.page_source
             driver.close()
