@@ -17,7 +17,7 @@ def setting_post(request):
           #  driver = webdriver.Chrome(
           #      executable_path=r'/Users/qq/PycharmProjects/parseltongue/chromedriver/chromedriver')
             chrome_opthions = Options.add_argument('--headless')
-            driver = webdriver.Chrome(chrome_options=chrome_opthions)
+            driver = webdriver.Chrome(chrome_options=chrome_opthions, executable_path='/app/.apt/usr/bin/google-chrome')
             driver.get(url)
             html = driver.page_source
             driver.close()
