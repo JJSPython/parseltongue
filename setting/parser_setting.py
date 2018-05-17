@@ -1,7 +1,8 @@
 from selenium import webdriver
 from django.shortcuts import render
 from crawler.parser_geneerator import Setting
-from selenium.webdriver.chrome.options import Options
+
+
 def setting_post(request):
     return_text = {}
     if request.method == 'POST':
@@ -15,8 +16,10 @@ def setting_post(request):
         if url is not '' and html is '':
           #  driver = webdriver.Chrome(
           #      executable_path=r'/Users/qq/PycharmProjects/parseltongue/chromedriver/chromedriver')
-            chrome_options = Options.set_headless(headless=True)
-            driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='/app/.apt/usr/bin/google-chrome')
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.binary_location ='/app/.apt/usr/bin/google-chrome'
+            chrome_options.add_argument('--headless')
+            driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(url)
             html = driver.page_source
             driver.close()
