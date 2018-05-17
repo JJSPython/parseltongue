@@ -14,10 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from parseltongue import parser
+from crawler import parser
+from setting import parser_setting
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('crawler', parser.parser_post),
+    path('setting', parser_setting.setting_post),
+    path('', parser.parser_post),
 ]
 urlpatterns += staticfiles_urlpatterns()
