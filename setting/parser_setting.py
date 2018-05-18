@@ -19,7 +19,7 @@ def setting_post(request):
             chrome_options = webdriver.ChromeOptions()
             chrome_options.binary_location ='/app/.apt/usr/bin/google-chrome'
             chrome_options.add_argument('--headless')
-            driver = webdriver.Chrome(executable_path=r'/chromedriver/chromedriver')
+            driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(url)
             html = driver.page_source
             driver.close()
