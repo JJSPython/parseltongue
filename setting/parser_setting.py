@@ -22,7 +22,7 @@ def setting_post(request):
             chrome_options.add_argument('--disable-gpu')
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--headless')
-            driver = webdriver.Chrome(executable_path='/app/.chromedriver/bin/chromedriver', chrome_options=chrome_options)
+            driver = webdriver.Chrome(executable_path='/app/.apt/usr/bin/google-chrome', chrome_options=chrome_options)
             driver.get(url)
             html = driver.page_source
             driver.close()
