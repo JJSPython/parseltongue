@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from selenium import webdriver
 from crawler.parser_geneerator import JsonToGetText
-import os
-from selenium.webdriver.chrome.options import Options as ChromeOptions
 
 
 def parser_post(request):
@@ -16,10 +14,7 @@ def parser_post(request):
         if url is not '' and html is '':
             #driver = webdriver.Chrome(
             #    executable_path=r'/Users/qq/PycharmProjects/parseltongue/chromedriver/chromedriver')
-            chrome_bin = os.environ.get('GOOGLE_CHROME_SHIM', None)
-            opts = ChromeOptions()
-            opts.binary_location = chrome_bin
-            driver = webdriver.Chrome(executable_path="chromedriver", chrome_options=opts)
+            driver = webdriver.Chrome(executable_path=r'/tmp/build_0497a9e5794c9df5d93b6850130d8944/.chromedriver/bin/chromedriver')
             driver.get(url)
             html = driver.page_source
             driver.close()
