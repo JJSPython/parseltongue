@@ -19,6 +19,7 @@ def parser_post(request):
             chrome_bin = os.environ.get('GOOGLE_CHROME_SHIM', None)
             opts = ChromeOptions()
             opts.binary_location = chrome_bin
+            opts.add_argument('--headless')
             driver = webdriver.Chrome(chrome_options=opts)
             driver.get(url)
             html = driver.page_source
