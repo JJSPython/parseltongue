@@ -14,7 +14,7 @@ def parser_post(request):
         if url is not '' and html is '':
             #driver = webdriver.Chrome(
             #    executable_path=r'/Users/qq/PycharmProjects/parseltongue/chromedriver/chromedriver')
-            driver = webdriver.Chrome(executable_path=r'/tmp/build_0497a9e5794c9df5d93b6850130d8944/.chromedriver/bin/chromedriver')
+            driver = webdriver.Chrome(executable_path=r'/app/.apt/usr/bin/chromedriver')
             driver.get(url)
             html = driver.page_source
             driver.close()
