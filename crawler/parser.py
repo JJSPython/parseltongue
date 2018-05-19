@@ -24,7 +24,6 @@ def parser_post(request):
             driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(url)
             html = driver.page_source
-            driver.close()
         if html is not '' and json is not '':
             get_html = JsonToGetText(html, json)
             return_text['tag'] = get_html.get_tag_text()
