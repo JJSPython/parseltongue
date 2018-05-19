@@ -28,7 +28,7 @@ def setting_post(request):
             driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(url)
             html = driver.page_source
-            driver.quit()
+            driver.close()
         if html is not '':
             setting = Setting(html)
             if tags is not '':
