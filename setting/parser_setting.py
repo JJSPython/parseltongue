@@ -29,7 +29,6 @@ def setting_post(request):
             driver.get(url)
             html = driver.page_source
         if html is not '':
-            driver.close()
             setting = Setting(html)
             if tags is not '':
                 setting.set_tag(str(tags).split(','))
@@ -38,4 +37,5 @@ def setting_post(request):
             if table is not '':
                 setting.set_table(table)
             return_text['json'] = setting.to_json()
+        driver.close()
     return render(request, "setting.html", return_text)
