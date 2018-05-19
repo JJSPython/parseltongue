@@ -28,6 +28,7 @@ def setting_post(request):
             driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(url)
             html = driver.page_source
+            driver.quit()
         if html is not '':
             setting = Setting(html)
             if tags is not '':
@@ -37,5 +38,4 @@ def setting_post(request):
             if table is not '':
                 setting.set_table(table)
             return_text['json'] = setting.to_json()
-        driver.close()
     return render(request, "setting.html", return_text)
