@@ -3,8 +3,10 @@ from django.shortcuts import render
 from crawler.parser_geneerator import Setting
 from selenium.webdriver.chrome.options import Options
 import os
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def setting_post(request):
     return_text = {}
     if request.method == 'POST':

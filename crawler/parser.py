@@ -3,8 +3,10 @@ from selenium import webdriver
 from crawler.parser_geneerator import JsonToGetText
 from selenium.webdriver.chrome.options import Options
 import os
+from django.views.decorators.csrf import csrf_exempt
 
 
+@csrf_exempt
 def parser_post(request):
     return_text = {}
     if request.method == 'POST':
