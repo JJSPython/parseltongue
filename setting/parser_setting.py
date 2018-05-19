@@ -25,7 +25,7 @@ def setting_post(request):
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--headless')
             chrome_options.add_argument('--remote-debugging-port=9222')
-            driver = webdriver.Chrome(chrome_options=chrome_options, executable_path=r'/app/.apt/usr/bin/google-chrome')
+            driver = webdriver.Chrome(chrome_options=chrome_options)
             driver.get(url)
             html = driver.page_source
             driver.close()
