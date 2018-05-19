@@ -29,6 +29,7 @@ def setting_post(request):
             driver.get(url)
             html = driver.page_source
         if html is not '':
+            driver.close()
             setting = Setting(html)
             if tags is not '':
                 setting.set_tag(str(tags).split(','))
