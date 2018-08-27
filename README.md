@@ -18,6 +18,11 @@ First time running the project? Make sure you have Python .
 ## Python Setup
 
 * Install [python](https://www.python.org/)
+* Python version is follow Heroku supported version(now python-3.6.6),if you want specify a Python version need add a runtime.txt
+   ```
+    $cat runtime.txt
+      python-x.x.x
+   ```
 * Install [Git](https://git-scm.com/downloads)
 
 ## Example
