@@ -18,7 +18,7 @@ First time running the project? Make sure you have Python installed, and follow 
 ## Python Setup
 
 * Install [python](https://www.python.org/)
-> We recommend you to use 3.6.6 or greater (As we're deploying this on Heroku, and it's using Python 3.6.6 now) However, if you want to specify a Python version, you can edit runtime.txt.
+  > We recommend you to use 3.6.6 or greater (As we're deploying this on Heroku, and it's using Python 3.6.6 now) However, if you want to specify a Python version, you can edit runtime.txt.
 * Install [Git](https://git-scm.com/downloads)
 
 ## License
